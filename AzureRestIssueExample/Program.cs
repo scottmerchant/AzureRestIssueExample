@@ -57,7 +57,7 @@ public class Program
             if (eastResource.Tags.Any(
                 t => !southEastResource.Tags.TryGetValue(t.Key, out var value) || value != t.Value))
             {
-                Console.WriteLine("Not all tags match");
+                Console.WriteLine($"Not all tags match for '{eastResource.Name}':");
                 foreach (var (key, value) in southEastResource.Tags)
                 {
                     var eValue =
